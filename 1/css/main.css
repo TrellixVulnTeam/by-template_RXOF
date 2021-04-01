@@ -2,12 +2,28 @@ a {
   text-decoration: none;
 }
 
+.back-img-top {
+  background: url(/img/header-img.jpeg);
+  background-size: 100%;
+}
+
 header {
-  display: flex;
-  justify-content: space-between;
+  background-color: black;
+  padding: 10px;
 }
 
 .full-header {
-  background: lightblue;
+  border: 1px red solid;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.full-header a {
+  color: white;
+}
+
+.header-nav {
+  max-width: 700px;
+  max-height: 10px;
 }
 /*# sourceMappingURL=main.css.map */
