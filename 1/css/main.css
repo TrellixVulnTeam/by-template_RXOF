@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-header {
+  background: lightblue;
+}
+/*# sourceMappingURL=main.css.map */
