@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Gotham Black";
+  src: url("../fonts/GothamBlack.otf") format("opentype");
+}
 body {
   margin: 0;
   height: 6100px;
@@ -13,7 +17,7 @@ header {
 
 .header-content {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1366px;
   display: flex;
   position: relative;
   top: 20px;
@@ -21,19 +25,33 @@ header {
   align-items: center;
 }
 
+.img-logo {
+  margin-left: 5%;
+}
+
 .header-nav {
   text-transform: uppercase;
 }
-.header-nav .menu {
+
+.menu {
+  font-family: "Lato", Serif;
   outline: none;
   padding: 10px;
   color: #969696;
-  margin-right: 20px;
+  margin-right: 15px;
   font-size: 13.5px;
+  max-width: 80px;
+  max-height: 35px;
 }
 
-.header-nav .active {
+.menu:hover {
+  border: #ffbb42 1px solid;
+  border-radius: 2px;
+}
+
+.active {
   background-color: #ffbb42;
+  border-radius: 2px;
   color: white;
 }
 
@@ -44,13 +62,13 @@ header {
 
 .top-back {
   position: absolute;
-  top: 0;
+  top: -20px;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: #709dca;
+  width: auto;
   height: 590px;
-  z-index: 1;
 }
 
 .top-text {
@@ -64,10 +82,12 @@ header {
 
 .top-text h1 {
   text-transform: uppercase;
+  font-family: "Gotham Black";
 }
 
 .top-text span {
   position: relative;
+  font-family: "Open Sans", serif;
   top: -20px;
 }
 
@@ -75,21 +95,26 @@ header {
   display: flex;
   position: relative;
   top: 100px;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  width: 1000px;
+  max-width: 1366px;
   z-index: 5;
 }
 
 .top-input {
-  margin: 5px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 285px;
   height: 45px;
   background-color: white;
+}
+
+.top-submit {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #fio, #mail, #phone {
@@ -100,7 +125,6 @@ header {
 }
 
 #req {
-  margin-right: 5px;
   height: 45px;
   width: 200px;
   text-transform: uppercase;
