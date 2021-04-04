@@ -7,20 +7,11 @@ body {
   height: 6100px;
 }
 
-a {
-  text-decoration: none;
-}
-
 header {
   height: 95px;
-}
-
-.header-content {
   margin: 0 auto;
   max-width: 1366px;
   display: flex;
-  position: relative;
-  top: 20px;
   justify-content: space-between;
   align-items: center;
 }
@@ -32,29 +23,27 @@ header {
 .header-nav {
   text-transform: uppercase;
 }
-
-.menu {
+.header-nav li {
+  display: inline-block;
   font-family: "Lato", Serif;
   outline: none;
   padding: 12px 20px;
   margin: 0 15px 0 0;
-  color: #969696;
   border-radius: 2px;
   border: 1px white solid;
   font-size: 13.5px;
+}
+
+.active {
+  background-color: #ffbb42;
+  border-radius: 2px;
 }
 
 .menu:hover {
   border-color: #ffbb42;
 }
 
-.active {
-  background-color: #ffbb42;
-  border-radius: 2px;
-  color: white;
-}
-
-.top {
+.first-block {
   display: block;
   position: relative;
 }
@@ -138,5 +127,10 @@ header {
 
 .input-img {
   margin: 10px;
+}
+
+.second-block {
+  height: 625px;
+  background-color: #ffc155;
 }
 /*# sourceMappingURL=main.css.map */
