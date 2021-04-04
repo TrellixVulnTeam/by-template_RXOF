@@ -4,7 +4,6 @@
 }
 body {
   margin: 0;
-  height: 6100px;
 }
 
 header {
@@ -32,6 +31,10 @@ header {
   border-radius: 2px;
   border: 1px white solid;
   font-size: 13.5px;
+}
+.header-nav li a {
+  text-decoration: none;
+  color: grey;
 }
 
 .active {
