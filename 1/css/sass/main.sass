@@ -1,6 +1,7 @@
 @font-face
   font-family: "Gotham Black"
   src: url("../fonts/GothamBlack.otf") format('opentype')
+
 body
   margin: 0
 header
@@ -17,13 +18,11 @@ header
   ul
     display: flex
     justify-content: flex-end
-
   li
     display: inline-block
     font-family: "Lato", Serif
     outline: none
     padding: 12px 20px
-
     border-radius: 2px
     border: 1px white solid
     font-size: 13.5px
@@ -60,7 +59,7 @@ header
   top: 110px
   position: relative
   text-align: center
-  z-index: 5
+
 .top-text h1
   text-transform: uppercase
   font-family: "Gotham Black"
@@ -157,6 +156,50 @@ header
 .page.active-page
   border-color: #1ca8dd
 
+.our-services
+  position: relative
+  top: 250px
+  margin: 0 auto
+  max-width: 1170px
+  .serv-H
+    text-align: center
+    color: #394b50
+    line-height: 10px
+    h1
+      text-transform: uppercase
+      font-family: "Gotham Black"
+      font-size: 30px
+    p
+      font-family: "Open Sans", serif
+      font-size: 16px
+      font-weight: bold
+.services
+  display: flex
+  flex-wrap: wrap
+  margin-top: 50px
+  .service
+    width: 505px
+    height: 105px
+    margin: 30px auto
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    .img-service
+      width: 15%
+    span
+      width: 85%
+      h2
+        margin-top: 0
+        font-family: "Lato", Serif
+        text-transform: uppercase
+        font-size: 16px
+        color: #394b50
+      p
+        font-family: "Open Sans"
+        font-size: 13px
+
+
+
 .second-block
   height: 625px
   background-color: #ffc155
@@ -180,3 +223,29 @@ header
 footer
   height: 260px
   background-color: #709dca
+
+
+
+@media screen and (max-width: 1010px)
+  .img-logo
+    display: none
+  .header-nav
+    margin: 0 auto
+    ul
+      justify-content: space-between
+  .first-block
+    height: 2100px
+    position: relative
+  .top-request
+    flex-wrap: wrap
+    flex-direction: column
+    align-content: center
+    margin: 0 auto
+  .top-input
+    margin: 10px 0
+    width: 50%
+  .top-submit
+    margin: 10px auto
+
+
+

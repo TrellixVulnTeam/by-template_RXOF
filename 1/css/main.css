@@ -72,7 +72,6 @@ header {
   top: 110px;
   position: relative;
   text-align: center;
-  z-index: 5;
 }
 
 .top-text h1 {
@@ -194,6 +193,59 @@ header {
   border-color: #1ca8dd;
 }
 
+.our-services {
+  position: relative;
+  top: 250px;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.our-services .serv-H {
+  text-align: center;
+  color: #394b50;
+  line-height: 10px;
+}
+.our-services .serv-H h1 {
+  text-transform: uppercase;
+  font-family: "Gotham Black";
+  font-size: 30px;
+}
+.our-services .serv-H p {
+  font-family: "Open Sans", serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.services .service {
+  width: 505px;
+  height: 105px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.services .service .img-service {
+  width: 15%;
+}
+.services .service span {
+  width: 85%;
+}
+.services .service span h2 {
+  margin-top: 0;
+  font-family: "Lato", Serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #394b50;
+}
+.services .service span p {
+  font-family: "Open Sans";
+  font-size: 13px;
+}
+
 .second-block {
   height: 625px;
   background-color: #ffc155;
@@ -222,5 +274,39 @@ header {
 footer {
   height: 260px;
   background-color: #709dca;
+}
+
+@media screen and (max-width: 1010px) {
+  .img-logo {
+    display: none;
+  }
+
+  .header-nav {
+    margin: 0 auto;
+  }
+  .header-nav ul {
+    justify-content: space-between;
+  }
+
+  .first-block {
+    height: 2100px;
+    position: relative;
+  }
+
+  .top-request {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 auto;
+  }
+
+  .top-input {
+    margin: 10px 0;
+    width: 50%;
+  }
+
+  .top-submit {
+    margin: 10px auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
