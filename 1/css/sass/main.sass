@@ -30,7 +30,8 @@ header
       text-decoration: none
       color: grey
 
-.menu.active
+.header-nav
+ .menu.active
   background-color: #ffbb42
   color: white
   border-radius: 2px
@@ -199,11 +200,25 @@ header
 
 
 .content
-  max-width:
+  max-width: 1170px
+  margin: 0 auto
+  border: 1px black solid
 
 .second-block
   height: 620px
   background-color: #ffc155
+  display: flex
+  flex-direction: row
+  .content
+    .left-side
+      border: 1px red solid
+      img
+        width: 50%
+        float: left
+    .right-side
+      text-align: left
+      border: 1px green solid
+
 
 .third-block
   height: 890px

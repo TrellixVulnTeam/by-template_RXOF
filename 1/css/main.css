@@ -40,7 +40,7 @@ header {
   color: grey;
 }
 
-.menu.active {
+.header-nav .menu.active {
   background-color: #ffbb42;
   color: white;
   border-radius: 2px;
@@ -246,9 +246,28 @@ header {
   font-size: 13px;
 }
 
+.content {
+  max-width: 1170px;
+  margin: 0 auto;
+  border: 1px black solid;
+}
+
 .second-block {
   height: 620px;
   background-color: #ffc155;
+  display: flex;
+  flex-direction: row;
+}
+.second-block .content .left-side {
+  border: 1px red solid;
+}
+.second-block .content .left-side img {
+  width: 50%;
+  float: left;
+}
+.second-block .content .right-side {
+  text-align: left;
+  border: 1px green solid;
 }
 
 .third-block {
