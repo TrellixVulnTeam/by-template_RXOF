@@ -10,7 +10,6 @@ body {
   max-width: 1170px;
   height: 100%;
   margin: 0 auto;
-  border: 1px black solid;
 }
 
 header {
@@ -245,8 +244,12 @@ header .header-nav ul li .active {
 }
 .second-block .content .left-side {
   width: 50%;
-  border: 1px red solid;
-  min-height: 300px;
+  background-image: url("../img/about_us.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 500px;
+  min-height: 500px;
+  background-position: center;
 }
 .second-block .content .left-side img {
   max-height: 620px;
@@ -339,6 +342,24 @@ footer {
   }
   .first-block .top-request .top-submit {
     margin: 10px auto;
+  }
+
+  .second-block {
+    height: 400px;
+  }
+  .second-block .content .left-side {
+    display: none;
+  }
+  .second-block .content .right-side {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+  }
+  .second-block .content .right-side h1 {
+    text-align: center;
+  }
+  .second-block .content .right-side p {
+    text-align: justify;
   }
 }
 /*# sourceMappingURL=main.css.map */

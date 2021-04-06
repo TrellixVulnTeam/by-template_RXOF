@@ -8,7 +8,6 @@ body
   max-width: 1170px
   height: 100%
   margin: 0 auto
-  border: 1px black solid
 
 header
   height: 95px
@@ -199,10 +198,15 @@ header
     display: flex
     flex-direction: row
     align-items: center
+
     .left-side
       width: 50%
-      border: 1px red solid
-      min-height: 300px
+      background-image: url("../img/about_us.jpg")
+      background-repeat: no-repeat
+      background-size: contain
+      height: 500px
+      min-height: 500px
+      background-position: center
       img
         max-height: 620px
         width: 100%
@@ -282,6 +286,18 @@ footer
         width: 50%
       .top-submit
         margin: 10px auto
-
+  .second-block
+    height: 400px
+    .content
+      .left-side
+        display: none
+      .right-side
+        display: block
+        margin: 20px auto
+        width: 70%
+        h1
+          text-align: center
+        p
+          text-align: justify
 
 
