@@ -6,6 +6,13 @@ body {
   margin: 0;
 }
 
+.content {
+  max-width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px black solid;
+}
+
 header {
   height: 95px;
   margin: 0 auto;
@@ -86,6 +93,9 @@ header .header-nav ul li .active {
   min-width: 278px;
   max-width: 1085px;
 }
+.first-block .top-request .input-img {
+  margin: 15px;
+}
 .first-block .top-request .top-input {
   margin: 0 5px;
   display: flex;
@@ -103,15 +113,13 @@ header .header-nav ul li .active {
 .first-block .top-request .top-submit :hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-
-#fio, #mail, #phone {
+.first-block #fio, .first-block #mail, .first-block #phone {
   width: 100%;
   height: 95%;
   border: none;
   outline: none;
 }
-
-#req {
+.first-block #req {
   height: 45px;
   width: 200px;
   text-transform: uppercase;
@@ -120,12 +128,7 @@ header .header-nav ul li .active {
   color: white;
   outline: none;
 }
-
-.input-img {
-  margin: 15px;
-}
-
-.laptop-area {
+.first-block .laptop-area {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -134,15 +137,13 @@ header .header-nav ul li .active {
   width: 650px;
   height: auto;
 }
-
-.laptop {
+.first-block .laptop {
   background-image: url("../img/notebook.png");
   background-repeat: no-repeat;
   width: 647px;
   height: 343px;
 }
-
-.laptop-img {
+.first-block .laptop-img {
   position: absolute;
   width: 450px;
   height: 245px;
@@ -151,66 +152,61 @@ header .header-nav ul li .active {
   background-image: url("../img/lap-img.png");
   background-repeat: no-repeat;
 }
-
-.img-page {
+.first-block .img-page {
   width: 647px;
   height: 50px;
 }
-.img-page ul {
+.first-block .img-page ul {
   display: flex;
   justify-content: center;
   height: 17px;
   padding: 0;
   padding-inline-start: 0;
 }
-.img-page li {
+.first-block .img-page ul li {
   display: inline;
   margin: 0 2px;
 }
-.img-page .page {
+.first-block .img-page ul .page {
   width: 13px;
   height: 13px;
   background: white;
   border: 2px solid #dedfe0;
   border-radius: 50%;
 }
-
-.page:hover {
+.first-block .img-page ul .page:hover {
   border-color: #1ca8dd;
 }
-
-.page.active-page {
+.first-block .img-page ul .page.active-page {
   border-color: #1ca8dd;
 }
-
-.our-services {
+.first-block .our-services {
   position: relative;
   top: 250px;
   margin: 0 auto;
   max-width: 1170px;
 }
-.our-services .serv-H {
+.first-block .our-services .serv-H {
   text-align: center;
   color: #394b50;
   line-height: 10px;
 }
-.our-services .serv-H h1 {
+.first-block .our-services .serv-H h1 {
   text-transform: uppercase;
   font-family: "Gotham Black";
   font-size: 30px;
 }
-.our-services .serv-H p {
+.first-block .our-services .serv-H p {
   font-family: "Open Sans", serif;
   font-size: 16px;
   font-weight: bold;
 }
-
-.services {
+.first-block .services {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
 }
-.services .service {
+.first-block .services .service {
   width: 505px;
   height: 105px;
   margin: 30px auto;
@@ -218,29 +214,22 @@ header .header-nav ul li .active {
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.services .service .img-service {
+.first-block .services .service .img-service {
   width: 15%;
 }
-.services .service span {
+.first-block .services .service span {
   width: 85%;
 }
-.services .service span h2 {
+.first-block .services .service span h2 {
   margin-top: 0;
   font-family: "Lato", Serif;
   text-transform: uppercase;
   font-size: 16px;
   color: #394b50;
 }
-.services .service span p {
+.first-block .services .service span p {
   font-family: "Open Sans";
   font-size: 13px;
-}
-
-.content {
-  max-width: 1170px;
-  height: 100%;
-  margin: 0 auto;
-  border: 1px black solid;
 }
 
 .second-block {
