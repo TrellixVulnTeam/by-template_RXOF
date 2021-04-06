@@ -327,20 +327,17 @@ footer {
     height: 2100px;
     position: relative;
   }
-
-  .top-request {
+  .first-block .top-request {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     margin: 0 auto;
   }
-
-  .top-input {
+  .first-block .top-request .top-input {
     margin: 10px 0;
     width: 50%;
   }
-
-  .top-submit {
+  .first-block .top-request .top-submit {
     margin: 10px auto;
   }
 }
