@@ -48,6 +48,7 @@ header .header-nav ul li .menu {
 }
 header .header-nav ul li .menu:hover {
   border-color: #ffbb42;
+  transition: 0.5s;
 }
 header .header-nav ul li .active {
   background-color: #ffbb42;
