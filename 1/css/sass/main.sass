@@ -9,6 +9,37 @@ body
   height: 100%
   margin: 0 auto
 
+.content_h1
+  margin-top: 50px
+  width: 100%
+  text-align: center
+  line-height: 22px
+  color: #394b50
+  h1
+    margin: 0
+    text-transform: uppercase
+    font-family: "Gotham Black"
+    font-size: 30px
+  p
+    margin: 5px 0 0 0
+    font-family: "Open Sans"
+    font-size: 18px
+
+.button
+  margin: 15px auto 0 auto
+  padding: 16px 22px
+  background: #ffc155
+  color: white
+  outline: none
+  border: none
+  border-radius: 5px
+  text-transform: uppercase
+  font-family: "Lato", Serif
+  font-size: 14px
+.button:hover
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+  transform: scale(1.2)
+
 header
   height: 95px
   margin: 0 auto
@@ -249,23 +280,10 @@ header
 
 
 .third-block
-  height: 900px
-  padding-top: 100px
+  min-height: 800px
   background-color: #e7edf3
-  .priceH
-
-    width: 100%
-    text-align: center
-    line-height: 22px
-    h1
-      margin-top: 0
-      text-transform: uppercase
-      font-family: "Gotham Black"
-      font-size: 30px
-      color: #394b50
-    p
-      font-family: "Open Sans"
-      font-size: 18px
+  border: 1px solid #e7edf3
+  padding: 1px
   .price-plan
     display: flex
     align-items: center
@@ -304,6 +322,7 @@ header
         font-size: 50px
         color: #ffc155
         font-weight: bold
+
 .underH
   margin-top: -5px
   padding-top: 0
@@ -315,31 +334,80 @@ header
   margin-top: 0
 
 
-.get_start
-  margin-top: 15px
-  padding: 16px 22px
-  background: #ffc155
-  color: white
-  outline: none
-  border: none
-  border-radius: 5px
-  text-transform: uppercase
-  font-family: "Lato", Serif
-  font-size: 14px
-.get_start:hover
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
-  transform: scale(1.2)
+
 
 
 
 
 .fourth-block
+  height: 850px
   max-height: 850px
-  border: 1px black solid
+  margin: 0
+  .content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.works_img
+  width: auto
+  margin: 100px 65px 0 65px
+  display: flex
+  align-items: flex-start
+  justify-content: space-around
+
+
+  .main_img
+    padding: 30px
+
+  .reverse_arrow
+
+    align-self: flex-end
+    transform: rotate(180deg)
+.works_text
+  display: flex
+  justify-content: space-around
+
+.step
+  max-width: 213px
+  margin-top: 60px
+  h1
+    text-transform: uppercase
+    font-family: "Lato", Serif
+    font-size: 20px
+    text-align: center
+    color: #394b50
+  p
+    text-align: center
+    font-size: 13px
+    font-family: "Open Sans", serif
+
+.works_button
+  margin: 60px auto 0 auto
+
+
+
+
+
 
 .fifth-block
+  padding: 1px
   max-height: 900px
   background-color: #ffbb42
+  .clients_h1
+    color: white
+
+.feedback_block
+  max-width: 560px
+  max-height: 240px
+  background-color: white
+  quotes: "\201c" "\00bb"
+
+
+
+
+
+
+
 
 .sixth-block
   max-height: 940px
