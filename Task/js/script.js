@@ -1,2 +1,3 @@
-
-console.log('hi')
+window.onscroll = () => {
+    if(window)
+}

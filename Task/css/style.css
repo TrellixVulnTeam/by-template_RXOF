@@ -1,11 +1,12 @@
 body{
     margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
 .content{
     max-width: 1280px;
     margin: 0 auto;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 h1{
     margin: 0;
@@ -141,6 +142,9 @@ ul{
     top: 34px;
     left: 38px;
 }
+.active{
+    display: block;
+}
 .like{
     width: 46px;
     height: 46px;
@@ -182,7 +186,6 @@ ul{
 }
 .item button{
     background-color: #6EBBD3;
-
     color: #fff;
     text-transform: capitalize;
     font-weight: bold;
@@ -193,4 +196,119 @@ ul{
     height: 65px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.more_cats{
+    margin: 70px auto 0 auto;
+    width: 380px;
+
+}
+
+.more_cats button{
+    width: 380px;
+    padding: 25px 120px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid #CACACA;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+.scroll_up{
+    display: none;
+    width: 59px;
+    height: 59px;
+    background-color: #6EBBD3;
+    position: fixed;
+    left: 88%;
+    bottom: 35%;
+
+}
+.scroll_up img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer{
+    margin: 70px auto 0 auto;
+    background: #1F2021;
+    max-width: 1280px;
+    height: 310px;
+    color: white;
+    border: 1px solid #1F2021;
+}
+.footer_content{
+    display: flex;
+    justify-content: space-between;
+    width: 1020px;
+    margin-top: 85px;
+
+
+}
+.footer_content_text{
+    width: 400px;
+}
+.footer_content_text h1{
+    font-size: 48px;
+}
+.footer_content_text p{
+    font-size: 28px;
+}
+.footer_content_form{
+    width: 581px;
+}
+
+input[type='email']{
+    width: 300px;
+    height: 65px;
+    border: none;
+    padding: 0;
+    border-radius: 10px;
+    text-indent: 33px;
+    outline: none;
+}
+input[type='submit']{
+    width: 250px;
+    height: 65px;
+    margin-left: 15px;
+    background-color: #6EBBD3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+}
+input[type='checkbox']{
+    display: none;
+}
+.sub{
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    width: 240px;
+}
+
+
+.new_check_box{
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    background-color: #6EBBD3;
+    border-radius: 3px;
+    position: relative;
+}
+.new_check_box:before{
+    background-image: url("../img/check.png");
+    width: 10px;
+    height: 10px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .2s;
+}
+input[type='checkbox']:checked + .new_check_box:before{
+    opacity: 1;
 }
