@@ -1,3 +1,0 @@
-window.onscroll = () => {
-    if(window)
-}

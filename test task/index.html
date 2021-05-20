@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link  rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/script.js"></script>
-    <title>Title</title>
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <title>Магазин</title>
 </head>
 <body>
     <header>
         <div class="header_img_eclipse"></div>
-
+            <div class="mob_menu"></div>
             <div class="content header_content">
                 <div class="header_logo">
                     <img src="img/logo.png">
                 </div>
 
                 <div class="header_menu">
-                    <ul class="menu">
+                    <ul class="menu link-hover-solid">
                         <li class="menu_content"><a href="#">main</a></li>
                         <li class="menu_content"><a href="#">gallery</a></li>
                         <li class="menu_content"><a href="#">news</a></li>
@@ -31,6 +32,8 @@
                     <h1>+544 3490 00000</h1>
                     <p>Звони скорее!</p>
                 </div>
+            </div>
+            <div class="content">
                 <div class='find_result_text'>Найдено 349 котов</div>
             </div>
 
@@ -39,17 +42,18 @@
     <div class="content">
         <div class="sort"><p>Сортировать по:</p>
             <ul>
-                <li id="sorted">Цене <img src="img/arrow.png"></li>
-                <li>Возрасту <img src="img/arrow.png"></li>
+                <li id="byPrice">Цене <img class="sort_arrow" src="img/arrow.png"></li>
+                <li id="byAge">Возрасту <img class="sort_arrow" src="img/arrow.png"></li>
             </ul>
         </div>
 
-        <div class="content_items">
-            <div class="item">
+        <div id='items' class="content_items">
+            <div class="item" price_value='30000' age_value="2">
                 <div class="cat_photo">
                     <img src="img/item/cat1.png">
                     <div class="discount active">-40%</div>
                     <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
                 </div>
                 <div class="cat_info">
                     <div class="cat_name">Кот полосатый</div>
@@ -64,22 +68,23 @@
                                 <p>Кол-во лап</p>
                             </div>
                         </div>
-                    <div class="cat_price">30 000 руб.</div>
+                    <div class="cat_price"><span class="price">30 000</span> руб.</div>
                 </div>
                 <button class="button_buy">купить</button>
             </div>
-            <div class="item">
+            <div class="item" price_value='40000' age_value="4">
                 <div class="cat_photo">
                     <img src="img/item/cat2.png">
                     <div class="discount">-40%</div>
                     <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
                 </div>
                 <div class="cat_info">
                     <div class="cat_name">Кот полосатый</div>
                     <div class="cat_info_text">
                         <div class="cat_color">Коричневый окрас</div>
                         <div class="cat_age">
-                            <p>2 мес.</p>
+                            <p>4 мес.</p>
                             <p>Возраст</p>
                         </div>
                         <div class="cat_paws">
@@ -87,22 +92,23 @@
                             <p>Кол-во лап</p>
                         </div>
                     </div>
-                    <div class="cat_price">40 000 руб.</div>
+                    <div class="cat_price"><span class="price">40 000</span> руб.</div>
                 </div>
                 <button class="button_buy">купить</button>
             </div>
-            <div class="item">
+            <div class="item" price_value='20000' age_value="5">
                 <div class="cat_photo">
                     <img src="img/item/cat3.png">
                     <div class="discount">-40%</div>
                     <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
                 </div>
                 <div class="cat_info">
                     <div class="cat_name">Кот полосатый</div>
                     <div class="cat_info_text">
                         <div class="cat_color">Коричневый окрас</div>
                         <div class="cat_age">
-                            <p>2 мес.</p>
+                            <p>5 мес.</p>
                             <p>Возраст</p>
                         </div>
                         <div class="cat_paws">
@@ -110,22 +116,23 @@
                             <p>Кол-во лап</p>
                         </div>
                     </div>
-                    <div class="cat_price">20 000 руб.</div>
+                    <div class="cat_price"><span class="price">20 000</span> руб.</div>
                 </div>
                 <button class="button_buy">купить</button>
             </div>
-            <div class="item">
+            <div class="item" price_value='25000' age_value="1">
                 <div class="cat_photo">
                     <img src="img/item/cat1.png">
                     <div class="discount ">-40%</div>
                     <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
                 </div>
                 <div class="cat_info">
                     <div class="cat_name">Кот полосатый</div>
                     <div class="cat_info_text">
                         <div class="cat_color">Коричневый окрас</div>
                         <div class="cat_age">
-                            <p>2 мес.</p>
+                            <p>1 мес.</p>
                             <p>Возраст</p>
                         </div>
                         <div class="cat_paws">
@@ -133,22 +140,23 @@
                             <p>Кол-во лап</p>
                         </div>
                     </div>
-                    <div class="cat_price">25 000 руб.</div>
+                    <div class="cat_price"><span class="price">25 000</span> руб.</div>
                 </div>
                 <button class="button_buy">купить</button>
             </div>
-            <div class="item">
+            <div class="item" price_value='30000' age_value="8">
                 <div class="cat_photo">
                     <img src="img/item/cat3.png">
                     <div class="discount active">-40%</div>
                     <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
                 </div>
                 <div class="cat_info">
                     <div class="cat_name">Кот полосатый</div>
                     <div class="cat_info_text">
                         <div class="cat_color">Коричневый окрас</div>
                         <div class="cat_age">
-                            <p>2 мес.</p>
+                            <p>8 мес.</p>
                             <p>Возраст</p>
                         </div>
                         <div class="cat_paws">
@@ -156,22 +164,23 @@
                             <p>Кол-во лап</p>
                         </div>
                     </div>
-                    <div class="cat_price">30 000 руб.</div>
+                    <div class="cat_price"><span class="price">30 000</span> руб.</div>
                 </div>
                 <button class="button_buy">купить</button>
             </div>
-            <div class="item">
+            <div class="item" price_value='10000' age_value="3">
                 <div class="cat_photo">
                     <img src="img/item/cat2.png">
                     <div class="discount">-40%</div>
                     <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
                 </div>
                 <div class="cat_info">
                     <div class="cat_name">Кот полосатый</div>
                     <div class="cat_info_text">
                         <div class="cat_color">Коричневый окрас</div>
                         <div class="cat_age">
-                            <p>2 мес.</p>
+                            <p>3 мес.</p>
                             <p>Возраст</p>
                         </div>
                         <div class="cat_paws">
@@ -179,16 +188,88 @@
                             <p>Кол-во лап</p>
                         </div>
                     </div>
-                    <div class="cat_price">10 000 руб.</div>
+                    <div class="cat_price"><span class="price">10 000</span> руб.</div>
+                </div>
+                <button class="button_buy">купить</button>
+            </div>
+            <div class="item" price_value='70000' age_value="1">
+                <div class="cat_photo">
+                    <img src="img/item/cat1.png">
+                    <div class="discount ">-40%</div>
+                    <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
+                </div>
+                <div class="cat_info">
+                    <div class="cat_name">Кот полосатый</div>
+                    <div class="cat_info_text">
+                        <div class="cat_color">Коричневый окрас</div>
+                        <div class="cat_age">
+                            <p>1 мес.</p>
+                            <p>Возраст</p>
+                        </div>
+                        <div class="cat_paws">
+                            <p>4</p>
+                            <p>Кол-во лап</p>
+                        </div>
+                    </div>
+                    <div class="cat_price"><span class="price">70 000</span> руб.</div>
+                </div>
+                <button class="button_buy">купить</button>
+            </div>
+            <div class="item" price_value='27000' age_value="8">
+                <div class="cat_photo">
+                    <img src="img/item/cat3.png">
+                    <div class="discount active">-40%</div>
+                    <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
+                </div>
+                <div class="cat_info">
+                    <div class="cat_name">Кот полосатый</div>
+                    <div class="cat_info_text">
+                        <div class="cat_color">Коричневый окрас</div>
+                        <div class="cat_age">
+                            <p>8 мес.</p>
+                            <p>Возраст</p>
+                        </div>
+                        <div class="cat_paws">
+                            <p>4</p>
+                            <p>Кол-во лап</p>
+                        </div>
+                    </div>
+                    <div class="cat_price"><span class="price">27 000</span> руб.</div>
+                </div>
+                <button class="button_buy">купить</button>
+            </div>
+            <div class="item" price_value='5000' age_value="3">
+                <div class="cat_photo">
+                    <img src="img/item/cat2.png">
+                    <div class="discount active">-40%</div>
+                    <div class="like"></div>
+                    <div class="mess_fav"><p></p></div>
+                </div>
+                <div class="cat_info">
+                    <div class="cat_name">Кот полосатый</div>
+                    <div class="cat_info_text">
+                        <div class="cat_color">Коричневый окрас</div>
+                        <div class="cat_age">
+                            <p>3 мес.</p>
+                            <p>Возраст</p>
+                        </div>
+                        <div class="cat_paws">
+                            <p>4</p>
+                            <p>Кол-во лап</p>
+                        </div>
+                    </div>
+                    <div class="cat_price"><span class="price">5 000</span> руб.</div>
                 </div>
                 <button class="button_buy">купить</button>
             </div>
         </div>
+
         <div class="more_cats">
-            <button>Показать ещё 20</button>
+            <button>Показать ещё 3</button>
         </div>
         <div class="scroll_up"><img src="img/arrow2.png" alt=""></div>
-
     </div>
     <footer>
         <div class="content footer_content">
@@ -197,11 +278,13 @@
                 <p>Подпишись и успей словить все акции</p>
             </div>
             <div class="footer_content_form">
-                <form>
-                    <input type="email" placeholder="Email">
-                    <input type="submit" value="Подписаться">
-                    <label class="sub">
-                        <input type="checkbox">
+                <form action="#"  name="subcribe" novalidate>
+                    <p class="validate_mess"></p>
+                    <input id='mail' type="email" placeholder="Email">
+                    <input id='mailBtn' type="submit" value="Подписаться">
+
+                    <label class="sub link-hover-solid">
+                        <input type="checkbox" checked>
                         <div class="new_check_box"></div>
                         <p>Подписаться на новости</p>
                     </label>
@@ -210,5 +293,6 @@
 
         </div>
     </footer>
+
 </body>
 </html>
