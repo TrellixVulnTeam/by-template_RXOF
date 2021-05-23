@@ -21,6 +21,9 @@ header{
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
 
 }
 .header_img_eclipse{
@@ -28,6 +31,8 @@ header{
     height: 252px;
     background-color: #1F2021;
     opacity: 79%;
+    -moz-opacity: 50%;
+    filter: alpha(opacity=50);
     position: absolute;
     z-index: 1;
 }
@@ -63,12 +68,15 @@ header{
     list-style-type: none;
     font-size: 18px;
     margin-right: 60px;
+
 }
 
 
-.header_number {
+.header_number,
+.header_number a{
     color: #fff;
     text-align: end;
+    text-decoration: none;
 }
 
 ul{
@@ -99,7 +107,6 @@ ul{
     margin-left: 20px;
     display: flex;
     align-items: center;
-
 }
 
 .sort p {
@@ -166,7 +173,7 @@ ul{
     -o-background-size: cover;
     opacity: 50%;
     -moz-opacity: 50%;
-    filter: alpha(opacity=50);
+    filter: alpha(opacity=0);
     transition: 0.5s;
 }
 .like:hover{
