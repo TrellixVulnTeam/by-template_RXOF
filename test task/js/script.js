@@ -1,4 +1,4 @@
-let items = document.querySelector('#items')
+let items = document.querySelector('.content_items')
 let btnPrice = document.querySelector('#byPrice')
 let btnAge = document.querySelector('#byAge')
 let arrow = document.querySelectorAll('.sort_arrow')
