@@ -3,14 +3,15 @@ let btnPrice = document.querySelector('#byPrice')
 let btnAge = document.querySelector('#byAge')
 let arrow = document.querySelectorAll('.sort_arrow')
 
+
+
 //Сортировка по убыванию
 function sortAdс(sortBy){
 	for(let i = 0; i < items.children.length; i++){
 		for(let j = i ; j < items.children.length; j++){
-			if(+items.children[i].getAttribute(sortBy) > +items.children[j].getAttribute(sortBy)){
+			if(+items.children[i].querySelector(sortBy).innerText.match(/\d/g).join('') > +items.children[j].querySelector(sortBy).innerText.match(/\d/g).join('')){
 				replacedNode = items.replaceChild(items.children[j], items.children[i]);
 				insertAfter(replacedNode, items.children[i]);
-
 			}
 		}
 	}
@@ -19,10 +20,9 @@ function sortAdс(sortBy){
 function sortDes(sortBy){
 	for(let i = 0; i < items.children.length; i++){
 		for(let j = i ; j < items.children.length; j++){
-			if(+items.children[i].getAttribute(sortBy) < +items.children[j].getAttribute(sortBy)){
+			if(+items.children[i].querySelector(sortBy).innerText.match(/\d/g).join('') < +items.children[j].querySelector(sortBy).innerText.match(/\d/g).join('')){
 				replacedNode = items.replaceChild(items.children[j], items.children[i]);
 				insertAfter(replacedNode, items.children[i]);
-
 			}
 		}
 	}
@@ -36,22 +36,22 @@ function insertAfter(elem, refElem){
 btnPrice.onclick = function (){
 	if(arrow[0].style.transform !== 'rotate(180deg)'){
 	arrow[0].style.transform = 'rotate(180deg)'
-		sortAdс('price_value')
+		sortAdс('.price')
 	}
 	else{
 		arrow[0].style.transform = ''
-		sortDes('price_value')
+		sortDes('.price')
 	}
 }
 //Сортировка по возрасту
 btnAge.onclick = function (){
 	if(arrow[1].style.transform !== 'rotate(180deg)'){
 		arrow[1].style.transform = 'rotate(180deg)'
-		sortAdс('age_value')
+		sortAdс('.cat_age')
 	}
 	else{
 		arrow[1].style.transform = ''
-		sortDes('age_value')
+		sortDes('.cat_age')
 	}
 }
 
