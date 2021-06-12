@@ -4,7 +4,6 @@
     margin: 0;
     background: #F4F4F4;
   }
-
   .content_wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -21,24 +20,20 @@
     -webkit-box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1);
   }
-
   .content_wrapper_left {
     width: 100%;
     height: 234px;
     position: relative;
   }
-
   .content_wrapper_right {
     position: static;
     width: 100%;
     height: 416px;
     margin-top: 40px;
   }
-
   .content_wrapper_left_circle_second, .content_wrapper_left_background, .content_wrapper_right_rectangle1, .content_wrapper_right_rectangle2 {
     display: none;
   }
-
   .content_wrapper_left_circle {
     position: absolute;
     width: 202px;
@@ -47,7 +42,6 @@
     left: 50%;
     margin-left: -101px;
   }
-
   .content_wrapper_left_image {
     position: absolute;
     width: 223px;
@@ -57,7 +51,6 @@
     margin-left: -103px;
     background-size: contain;
   }
-
   .content_wrapper_left_medicine_name {
     position: absolute;
     width: 89px;
@@ -66,34 +59,28 @@
     left: 5%;
     color: #212121;
   }
-
   .content_wrapper_left_medicine_eco {
     position: absolute;
     top: 30px;
     left: 85%;
     width: 41px;
     height: 23px;
-    color: #212121;
+    color: pink;
   }
-
   .content_wrapper_right_rectangle1_text, .content_wrapper_right_form_name, .content_wrapper_right_form_phone, #btn_order {
     position: static;
   }
-
   .default_option:before {
     position: relative;
   }
-
   #btn_order {
     width: 280px;
     height: 42px;
     margin: 0 auto;
   }
-
   .content_wrapper_right_rectangle1_text {
     margin: 35px auto 0 auto;
   }
-
   .content_wrapper_right_form {
     position: static;
     width: 280px;
@@ -102,24 +89,20 @@
   .content_wrapper_right_form .phone_area {
     margin-top: 20px;
   }
-
   .content_wrapper_right_form_name {
     width: 280px;
     height: 76px;
   }
-
   #name {
     position: static;
     width: 280px;
     height: 50px;
     margin-bottom: 0;
   }
-
   #phone {
     width: 174px;
     margin-bottom: 0;
   }
-
   .content_wrapper_right_form_country {
     position: relative;
     width: 96.18px;
@@ -133,7 +116,7 @@
     height: 18px;
   }
   .content_wrapper_right_form_country .default_option:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 10%;
     left: 100%;
@@ -161,7 +144,6 @@
   .content_wrapper_right_form_country .select_ul li {
     padding: 12px 17px;
   }
-
   .trusted_secure {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -205,3 +187,4 @@
     margin: 0 5%;
   }
 }
+/*# sourceMappingURL=mobile.css.map */

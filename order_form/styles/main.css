@@ -460,6 +460,7 @@
   margin: 0;
   width: 32px;
 }
+
 .content_wrapper_right_form_country ul {
   margin: 0;
   padding: 0;
@@ -469,12 +470,13 @@
   font-size: 14px;
   line-height: 130%;
 }
+
 .content_wrapper_right_form_country ul li {
   list-style: none;
 }
 
 .default_option:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 19px;
   left: 82px;
@@ -508,13 +510,16 @@
           box-sizing: border-box;
   z-index: 6;
 }
+
 .select_ul li {
   padding: 16px 20px;
   border: 1px solid #E4E4E4;
 }
+
 .select_ul li p {
   margin: 0;
 }
+
 .select_ul li:hover {
   background-color: #E4E4E4;
 }
@@ -543,3 +548,4 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+/*# sourceMappingURL=main.css.map */
