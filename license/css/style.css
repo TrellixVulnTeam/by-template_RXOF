@@ -1,0 +1,143 @@
+@font-face{
+	font-family: "Bebas";
+	font-weight: normal;
+	src: url(../fonts/Bebas.ttf) format("truetype");
+}
+
+body {
+	margin-top: 0;
+	background-color: #ebebeb;
+
+ }
+ .content{
+ 	max-width: 1000px;
+ 	background-color: #f8f8f8;
+ 	margin: 10% auto;
+ 	padding: 10px 0;
+ }
+.form_license{
+	width: 500px;
+	margin: 10px auto;
+}
+ul{
+	padding: 0;
+}
+ li{
+ 	margin-top: 5px;
+ 	width: 100%;
+ 	list-style-type: none;
+ 	border: 1px solid #f8f8f8;
+
+ }
+ li:hover{
+ 	background-color: #ebf4f7;
+ 	border-color: #d2e6ed;
+ }
+ .license_plan_item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+ 	padding: 15px 0;
+
+
+ }
+ .license_plan_name, .total{
+ 	text-transform: uppercase;
+ 	color: #797979;
+ 	font-size: 26px;
+	font-family: "Bebas", Arial;
+	width: 65%;
+
+ }
+ .license_plan_price{
+ 	color: #979797;
+	font-size: 14px;
+	font-family: sans-serif;
+	 margin-right: 10px;
+
+ }
+.license_plan_item input[type='radio']{
+	display: none;
+}
+.new_radio{
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	border: 5px solid #dadada;
+	border-radius: 50%;
+	position: relative;
+}
+.new_radio:before{
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #0294bf;
+	opacity: 0;
+	transition: .2s;
+}
+
+.license_plan_item input[type='radio']:checked + .new_radio:before{
+	opacity: 1;
+}
+.license_plan_item input[type='radio']:checked + .new_radio{
+	border-color: #34648e;
+}
+
+.license_count{
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+
+}
+
+.license_count_content {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 16px;
+
+}
+select{
+	width: 55px;
+	height: 26px;
+	outline-color: #96b7ec;
+}
+.license_total_price{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+#sub{
+	padding: 12px 40px;
+	outline: none;
+	border: none;
+	background-color: #33a845;
+	border-radius: 20px;
+	color: #fff
+}
+#sub:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	transform: scale(1.2);
+}
+.total{
+	letter-spacing: 1px;
+}
+.selected_plan{
+	margin-top: 25px;
+	color: #378aaa;
+	font-size: 18px;
+}
+.totalPrice{
+	color: #378aaa;
+
+}
+sup{
+	font-size: 14px;
+}

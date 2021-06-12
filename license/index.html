@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>License</title>
+	<link  rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="script/price.js" defer ></script>
+</head>
+<body>
+	<div class="content">
+		<form class="form_license" >
+		<div class="license_plan">
+			<ul>
+				<label for="#1">
+					<li class="license_plan_item">
+						<input type="radio" name="plan" id="#1" value="13">
+						<span class="new_radio"></span>
+						<span class="license_plan_name"> license plan #1</span>
+						<span class="license_plan_price"> $13 per license</span>					
+					</li>
+				</label>
+
+					<label for="#2">
+						<li class="license_plan_item">
+							<input type="radio" name="plan" id="#2" value="22">
+							<span class="new_radio"></span>
+							<span class="license_plan_name"> license plan #2</span>
+							<span class="license_plan_price"> $22 per license</span>
+						</li>
+				</label>
+
+				<label for="#3">
+						<li class="license_plan_item">
+							<input type="radio" name="plan" id="#3" value="34">
+							<span class="new_radio"></span>
+							<span class="license_plan_name"> license plan #3</span>
+							<span class="license_plan_price"> $34 per license</span>
+						</li>
+				</label>
+
+			</ul>
+		</div>
+
+		<div class="license_count">
+			<div class="license_count_content">
+				<span> Number of licenses: </span>		
+				<select name="count_of_license">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</div>
+		</div>
+		</form>
+		<div class="license_total_price">
+			
+			<h1 class="total">total:
+				<span class="totalPrice">$<span name="totalPrice">0</span><sup>us</sup></span>
+			</h1>
+			<button name="submit_license" id="sub" onclick="thx()">BUY NOW</button>
+			<span class="selected_plan">Selected plan: <span name="number_plan">You didn't choose a plan</span></span>
+			
+		</div>
+
+</div>
+
+</body>
+</html>
