@@ -379,13 +379,11 @@ input[type='checkbox']:checked + .new_check_box:before{
 
 .link-hover-solid p:after,
 .link-hover-solid a:after{
-    background-color: #6EBBD3;
+    background-color: #23C967;
     display: block;
     content: "";
     height: 3px;
     width: 0%;
-    -webkit-transition: width .3s ease-in-out;
-    -moz--transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
 }
 .link-hover-solid a:after{
@@ -395,7 +393,6 @@ input[type='checkbox']:checked + .new_check_box:before{
 .link-hover-solid p:focus:after,
 .link-hover-solid a:hover:after,
 .link-hover-solid a:focus:after
-
 {
     width: 100%;
 }
