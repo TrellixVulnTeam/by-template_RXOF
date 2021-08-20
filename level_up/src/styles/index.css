@@ -5,6 +5,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background: linear-gradient(45deg, #FFFACD, #DDA0DD);
 }
 
 .content {
@@ -20,7 +21,6 @@ body {
 
 .promo_content {
   position: absolute;
-  margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,11 +32,13 @@ body {
   z-index: 1;
 }
 .promo_content .promo_name {
+  margin-top: 30px;
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
 }
 .promo_content .promo_photo {
+  margin-top: 30px;
   width: 50%;
   text-align: center;
 }
@@ -44,25 +46,44 @@ body {
   width: 50%;
 }
 .promo_content .promo_description {
+  margin-top: 30px;
   width: 50%;
+}
+.promo_content .promo_description ul {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+.promo_content .promo_description ul li {
+  list-style: none;
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .video {
   position: absolute;
   top: 0;
+  left: 50%;
+  margin-left: -575px;
   z-index: 0;
 }
 .video video {
-  width: 100%;
+  max-width: 1150px;
   height: auto;
 }
 
-.block2, .block4 {
-  background: linear-gradient(45deg, #FFFACD, #DDA0DD);
+.block1 {
+  background-image: url("../img/videoBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.block3, .block5 {
-  background: linear-gradient(45deg, #DDA0DD, #FFFACD);
+.block5, .block2, .block3, .block4 {
+  background: rgba(0, 0, 0, 0);
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .product_composition {
@@ -93,14 +114,23 @@ body {
   text-align: center;
 }
 .product_composition .product_composition_item .item_photo {
-  width: 100%;
+  border: 1px solid black;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
 }
 .product_composition .product_composition_item .item_photo img {
+  margin-top: 25%;
   width: 100%;
 }
 .product_composition .product_composition_item .item_name {
   margin-top: 10px;
   font-size: 18px;
+}
+.product_composition .product_composition_button {
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
 .feedback {
@@ -113,7 +143,7 @@ body {
 }
 
 .feedback::-webkit-scrollbar-thumb {
-  background: #5a2169;
+  background: #914dac;
   border-radius: 10px;
   height: 1px;
   width: 1px;
@@ -201,7 +231,10 @@ body {
   position: relative;
   width: 50%;
   height: 40px;
+  background-color: #914dac;
   border-radius: 10px;
+  color: white;
+  font-size: 18px;
   outline: none;
   border: none;
   left: 25%;
@@ -252,7 +285,7 @@ body {
   color: red;
 }
 .form_content .form_order_product_price .price .new_price {
-  font-size: 30px;
+  font-size: 32px;
   color: green;
 }
 .form_content .form {
@@ -275,21 +308,35 @@ body {
 .form_content .form form input {
   height: 50px;
   width: 80%;
-  margin-top: 20px;
   padding: 0 20px;
   outline: none;
 }
+.form_content .form form span {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  width: 85%;
+  text-align: end;
+  font-size: 14px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
 
-.countdown-title {
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
+#submit_order {
+  width: 80%;
+  height: 40px;
+  margin-top: 20px;
+  background-color: #914dac;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  border: none;
 }
 
 .countdown {
   font-family: sans-serif;
-  color: #fff;
+  color: black;
   display: inline-block;
   font-weight: 100;
   text-align: center;
@@ -299,14 +346,14 @@ body {
 .countdown-number {
   padding: 10px;
   border-radius: 3px;
-  background: #00bf96;
+  background: #914dac;
   display: inline-block;
 }
 
 .countdown-time {
   padding: 15px;
   border-radius: 3px;
-  background: #00816a;
+  background: #FFFACD;
   display: inline-block;
 }
 

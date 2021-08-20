@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<script defer src="vendors-node_modules_babel_polyfill_lib_index_js.js"></script><script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+<script defer src="vendors-node_modules_babel_polyfill_lib_index_js-node_modules_jquery_dist_jquery_js.js"></script><script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
 <body>    
     <div class="block1">
         <div class="content">
@@ -21,14 +21,14 @@
                         <li>Эффективность</li>
                         <li>Надежность</li>
                     </ul>
-                    <button class="btn scroll" href="#order_form">Заказать</button>
+                    <button class="btn scroll">Заказать</button>
                 </div>              
             </div>
             
         </div>
-        <!-- <div class="video">
-            <video src="video/dna.mp4" autoplay></video>
-        </div> -->
+        <div class="video">
+            <video src="video/video.mp4" autoplay loop preload="auto"></video>
+        </div>
     </div>
     <div class="block2">
         <div class="content product_composition">
@@ -59,6 +59,10 @@
                 <div class="item_photo"><img src="img/1920px-Sildenafil.svg.png"></div>
                 <div class="item_name">Силденафил</div>                
             </div>
+            <div class="product_composition_button ">
+                <button class="btn scroll">Заказать</button>               
+            </div>
+            
 
             
             
@@ -112,7 +116,7 @@
 
                 <div class="promo2_description">  
                     <p>Изучение лекарственных средств производится путём химического анализа, фармакологических исследований и клинических наблюдений (см. Фармакология); при этом определяются действующие начала вещества и его основные качественные показатели: органотропность или паразитотропность лекарства, то есть преимущественное его действие на те или другие органы больного или же на возбудителей заболевания (на бактерии, паразитов и т. п.); наличие «побочного» (нежелательного) действия; способность лекарства вызывать у некоторых лиц особую к себе чувствительность (например заболевание насморком и появление тошноты от ничтожных количеств ипекакуаны)[2].</p>              
-                    <button class="btn">Заказать</button>
+                    <button class="btn scroll">Заказать</button>
                 </div>
 
                 <div class="promo2_specifications">
@@ -150,10 +154,13 @@
                     </div>
                 </div>
                 <div class="form">
-                    <form>
-                        <input type="text" placeholder="Введите имя">
-                        <input type="tel" placeholder="Введите номер">
-                        <input type="submit" value="Заказать" >
+                    <form action="#" method="get" >
+                        <span class='name_alt'>Введите имя</span>
+                        <input type="text" placeholder="Введите имя" id="name">
+                        <span class=phone_alt>Введите номер формата +7(ХХХ)-ХХХ-ХХ-ХХ</span>
+                        <input type="tel" placeholder="Введите номер" id='phone'>
+
+                        <input type="submit" value="Заказать" id="submit_order">
                     </form>
                 </div>
             </div>
