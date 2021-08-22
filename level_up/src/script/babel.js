@@ -1,9 +1,11 @@
-import '@/styles/index.sass'
+import '@/styles/index.css'
+import $ from 'jquery'
 
+// Таймер
 function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);    
+    let t = Date.parse(endtime) - Date.parse(new Date())
+    let seconds = Math.floor((t / 1000) % 60)
+    let minutes = Math.floor((t / 1000 / 60) % 60)   
     return {
       'total': t,      
       'minutes': minutes,
@@ -12,41 +14,70 @@ function getTimeRemaining(endtime) {
   }
   
   function initializeClock(id, endtime) {
-    var clock = document.getElementById(id);
-    
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
+    let clock = document.getElementById(id)
+    let minutesSpan = clock.querySelector('.minutes')
+    let secondsSpan = clock.querySelector('.seconds')
   
     function updateClock() {
-      var t = getTimeRemaining(endtime);
-  
-      
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-  
+      let t = getTimeRemaining(endtime)
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2)
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2)  
       if (t.total <= 0) {
-        clearInterval(timeinterval);
+        clearInterval(timeinterval)
       }
     }
-  
     updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
+    let timeinterval = setInterval(updateClock, 1000)
   }
-  
-//   var deadline="January 01 2018 00:00:00 GMT+0300"; //for Ukraine
-  var deadline = new Date(Date.parse(new Date()) + 30 * 60 * 1000); // for endless timer
-  initializeClock('countdown', deadline);
+  let deadline = new Date(Date.parse(new Date()) + 30 * 60 * 1000)
+  initializeClock('countdown', deadline)
 
+// Скролл к форме
+  let btnScroll = $('.scroll')
+  let form = $('#order_form').offset().top
 
-//   let btnScroll = document.querySelector('.scroll')
+  for(let i = 0; i < btnScroll.length; i++){
+    btnScroll[i].onclick = function (){
+      window.scrollTo({
+        top: form,
+        behavior: "smooth"
+      })
+    }
+  }
 
-// btnScroll.onclick = function (){
-// 	window.scrollTo({
-// 		top: 1800,
-// 		behavior: "smooth"
-// 	})
-// }
+// Подсказка для инпутов при селекте
+  let name = $('#name')
+  name.focus(function (){
+    let nameAlt = $('.name_alt')
+    nameAlt.css("opacity", "1")
+  })
+  name.blur(function (){
+    let nameAlt = $('.name_alt')
+    nameAlt.css("opacity", "0")
+  })
 
-// window.addEventListener('scroll', function() {
-//     console.log(pageYOffset);
-//   });
+  let phone = $('#phone')
+  phone.focus(function (){
+    let phoneAlt = $('.phone_alt')
+    phoneAlt.css("opacity", "1")
+  })
+  phone.blur(function (){
+    let phoneAlt = $('.phone_alt')
+    phoneAlt.css("opacity", "0")
+  })
+
+// Ввод только цифр
+    for (let i = 0; i < phone.length; i++) {
+      phone[i].oninput = function () {
+            dpcm(this);
+        }
+    }
+
+    function dpcm(input) {
+        let value = input.value;
+        let re = /[^0-9 ( ) +]/gi;
+        if (re.test(value)) {
+            value = value.replace(re, '');
+            input.value = value;
+        }
+    }

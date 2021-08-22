@@ -16,17 +16,17 @@
   \*************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/styles/index.sass */ \"./styles/index.sass\");\n\n\nfunction getTimeRemaining(endtime) {\n  var t = Date.parse(endtime) - Date.parse(new Date());\n  var seconds = Math.floor(t / 1000 % 60);\n  var minutes = Math.floor(t / 1000 / 60 % 60);\n  return {\n    'total': t,\n    'minutes': minutes,\n    'seconds': seconds\n  };\n}\n\nfunction initializeClock(id, endtime) {\n  var clock = document.getElementById(id);\n  var minutesSpan = clock.querySelector('.minutes');\n  var secondsSpan = clock.querySelector('.seconds');\n\n  function updateClock() {\n    var t = getTimeRemaining(endtime);\n    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);\n    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);\n\n    if (t.total <= 0) {\n      clearInterval(timeinterval);\n    }\n  }\n\n  updateClock();\n  var timeinterval = setInterval(updateClock, 1000);\n} //   var deadline=\"January 01 2018 00:00:00 GMT+0300\"; //for Ukraine\n\n\nvar deadline = new Date(Date.parse(new Date()) + 30 * 60 * 1000); // for endless timer\n\ninitializeClock('countdown', deadline); //   let btnScroll = document.querySelector('.scroll')\n// btnScroll.onclick = function (){\n// \twindow.scrollTo({\n// \t\ttop: 1800,\n// \t\tbehavior: \"smooth\"\n// \t})\n// }\n// window.addEventListener('scroll', function() {\n//     console.log(pageYOffset);\n//   });\n\n//# sourceURL=webpack:///./script/babel.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/styles/index.css */ \"./styles/index.css\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n\n // Таймер\n\nfunction getTimeRemaining(endtime) {\n  var t = Date.parse(endtime) - Date.parse(new Date());\n  var seconds = Math.floor(t / 1000 % 60);\n  var minutes = Math.floor(t / 1000 / 60 % 60);\n  return {\n    'total': t,\n    'minutes': minutes,\n    'seconds': seconds\n  };\n}\n\nfunction initializeClock(id, endtime) {\n  var clock = document.getElementById(id);\n  var minutesSpan = clock.querySelector('.minutes');\n  var secondsSpan = clock.querySelector('.seconds');\n\n  function updateClock() {\n    var t = getTimeRemaining(endtime);\n    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);\n    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);\n\n    if (t.total <= 0) {\n      clearInterval(timeinterval);\n    }\n  }\n\n  updateClock();\n  var timeinterval = setInterval(updateClock, 1000);\n}\n\nvar deadline = new Date(Date.parse(new Date()) + 30 * 60 * 1000);\ninitializeClock('countdown', deadline); // Скролл к форме\n\nvar btnScroll = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.scroll');\nvar form = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#order_form').offset().top;\n\nfor (var i = 0; i < btnScroll.length; i++) {\n  btnScroll[i].onclick = function () {\n    window.scrollTo({\n      top: form,\n      behavior: \"smooth\"\n    });\n  };\n} // Подсказка для инпутов при селекте\n\n\nvar name = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#name');\nname.focus(function () {\n  var nameAlt = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.name_alt');\n  nameAlt.css(\"opacity\", \"1\");\n});\nname.blur(function () {\n  var nameAlt = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.name_alt');\n  nameAlt.css(\"opacity\", \"0\");\n});\nvar phone = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#phone');\nphone.focus(function () {\n  var phoneAlt = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.phone_alt');\n  phoneAlt.css(\"opacity\", \"1\");\n});\nphone.blur(function () {\n  var phoneAlt = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.phone_alt');\n  phoneAlt.css(\"opacity\", \"0\");\n}); // Ввод только цифр\n\nfor (var _i = 0; _i < phone.length; _i++) {\n  phone[_i].oninput = function () {\n    dpcm(this);\n  };\n}\n\nfunction dpcm(input) {\n  var value = input.value;\n  var re = /[^0-9 ( ) +]/gi;\n\n  if (re.test(value)) {\n    value = value.replace(re, '');\n    input.value = value;\n  }\n}\n\n//# sourceURL=webpack:///./script/babel.js?");
 
 /***/ }),
 
-/***/ "./styles/index.sass":
-/*!***************************!*\
-  !*** ./styles/index.sass ***!
-  \***************************/
+/***/ "./styles/index.css":
+/*!**************************!*\
+  !*** ./styles/index.css ***!
+  \**************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./styles/index.sass?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./styles/index.css?");
 
 /***/ })
 
@@ -50,7 +50,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -90,6 +90,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -167,8 +191,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["vendors-node_modules_babel_polyfill_lib_index_js"], function() { return __webpack_require__("../node_modules/@babel/polyfill/lib/index.js"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_babel_polyfill_lib_index_js"], function() { return __webpack_require__("./script/babel.js"); })
+/******/ 	__webpack_require__.O(undefined, ["vendors-node_modules_babel_polyfill_lib_index_js-node_modules_jquery_dist_jquery_js"], function() { return __webpack_require__("../node_modules/@babel/polyfill/lib/index.js"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_babel_polyfill_lib_index_js-node_modules_jquery_dist_jquery_js"], function() { return __webpack_require__("./script/babel.js"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
