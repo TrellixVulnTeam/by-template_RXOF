@@ -8,13 +8,13 @@ body
 
 .content
     max-width: 1200px
-    height: 650px
+    
     margin: 0 auto
     
 
 .block1
-    position: relative
-    height: auto  
+    position: relative    
+    height: 650px
 .promo_content 
     position: absolute   
     display: flex
@@ -49,8 +49,10 @@ body
     left: 50%
     margin-left: -575px
     z-index: 0
+    max-width: 1150px
+    height: auto
     video
-        max-width: 100%
+        width: 100%
         height: auto
 .block1
     background-image: url('../img/videoBG.png')
@@ -58,11 +60,12 @@ body
     background-repeat: no-repeat
 
 
-.block5, .block2, .block3 , .block4
+.block
     background: rgba(0, 0, 0, 0)
     border-top: 1px solid white
     border-bottom: 1px solid white
     width: 100%
+    height: auto
 
 .product_composition    
     display: grid  
@@ -97,6 +100,7 @@ body
             font-size: 18px
     .product_composition_button
         grid-column: 2
+        
 
 .feedback
     overflow-x: auto
@@ -153,10 +157,12 @@ body
         img
             width: 80%
     .promo2_description
-        width: 40%        
+        width: 40%           
                        
     .promo2_specifications
-        height: 50px
+        // height: 50px
+        margin-top: 20px
+        margin-bottom: 50px
         width: 100%
         ul
             text-align: center
@@ -168,7 +174,9 @@ body
         
 .btn
     position: relative
-    width: 50%
+    left: 50%
+    transform: translate(-50%, 0) 
+    width: 80%
     height: 40px
     background-color: #914dac
     border-radius: 10px
@@ -176,7 +184,7 @@ body
     font-size: 18px
     outline: none
     border: none
-    left: 25%
+    // left: 25%
     margin-top: 40px
     
 
@@ -290,3 +298,58 @@ body
   to 
     transform: scale(.85)
   
+@media screen and ( max-width: 420px )
+    .video
+        max-width: 420px
+        height: auto
+        left: 50%
+        top: 20%
+        margin-left: -210px
+    .promo_content
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        font-size: 14px
+        button
+            width: 80%
+        .promo_photo
+            width: 50%
+        .promo_description            
+            width: 100%
+            margin-top: 50px    
+    
+    .product_composition
+        display: flex
+        flex-direction: column
+        align-items: center
+    .product_composition_photo
+        display: none
+    .product_composition_button 
+        width: 100%
+        margin-bottom: 50px
+
+    .promo2_content
+        flex-direction: column
+        align-items: center
+        .promo2_photo
+            width: 80%
+        .promo2_description
+            width: 80%
+            margin-top: 20px
+        .promo2_specifications
+            margin-top: 20px
+            ul               
+                li                    
+                    display: block
+                    font-size: 22px
+                    margin: 10px 50px
+    
+    .form_content    
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        .form_order_timer
+            margin-top: 50px
+        .form
+            margin: 0 auto 40px auto
+            width: 100%
