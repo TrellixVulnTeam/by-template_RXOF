@@ -1,4 +1,4 @@
-import '@/styles/index.sass'
+import '@/styles/index.css'
 
 let items = document.querySelector('.content_items')
 let btnPrice = document.querySelector('#byPrice')
@@ -71,12 +71,12 @@ btnAge.onclick = function (){
 
 
 //Изменение состояния кнопки покупки
-let btnBuy = document.querySelectorAll('.button_buy')
-for (let n = 0; n < btnBuy.length; n++){
-	btnBuy[n].onclick = function (){
-		btnBuy[n].style.backgroundColor = 'black'
-		btnBuy[n].innerText = 'Продано'
-	}
+let block = document.getElementById('content')
+block.onclick = function(event){
+	let target = event.target
+	if (target.className != 'button_buy') return;
+	target.style.backgroundColor = 'black'
+	target.innerText = 'Продано'
 }
 
 //Добавление в избранное
